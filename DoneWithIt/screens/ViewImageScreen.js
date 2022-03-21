@@ -8,6 +8,7 @@ import {
 } from "react-native";
 
 import colors from "../app/config/colors";
+import dimensions from "../app/config/dimensions";
 
 export default function ViewImageScreen(props) {
   return (
@@ -29,20 +30,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   chair: {
-    width: "100%",
-    height: "100%",
+    width: dimensions.widthMax,
+    height: dimensions.heightMax,
   },
   closeIcon: {
-    width: 50,
-    height: 50,
+    width: dimensions.ViewImageScreenIconWidth,
+    height: dimensions.ViewImageScreenIconHeight,
     backgroundColor: colors.primary,
     position: "absolute",
     top: 40,
     left: 30,
   },
   deleteIcon: {
-    width: 50,
-    height: 50,
+    width: dimensions.ViewImageScreenIconWidth,
+    height: dimensions.ViewImageScreenIconHeight,
     backgroundColor: colors.secondary,
     position: "absolute",
     right: 30,

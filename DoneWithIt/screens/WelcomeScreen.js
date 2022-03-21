@@ -1,6 +1,7 @@
 import { View, ImageBackground, Text, Image, StyleSheet } from "react-native";
 
 import colors from "../app/config/colors";
+import dimensions from "../app/config/dimensions";
 
 export default function WelcomeScreen(props) {
   return (
@@ -31,8 +32,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   image: {
-    width: "100%",
-    height: "100%",
+    width: dimensions.widthMax,
+    height: dimensions.heightMax,
   },
   text: {
     color: colors.black,
@@ -41,8 +42,8 @@ const styles = StyleSheet.create({
     fontWeight: "300",
   },
   logo: {
-    width: "25%",
-    height: "25%",
+    width: dimensions.WelcomeScreenLogoWidth,
+    height: dimensions.WelcomeScreenLogoHeight,
     alignSelf: "center",
     top: 20,
   },
