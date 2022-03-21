@@ -1,10 +1,12 @@
 import { View, ImageBackground, Text, Image, StyleSheet } from "react-native";
 
+import colors from "../app/config/colors";
+
 export default function WelcomeScreen(props) {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../assets/background.jpg")}
+        source={require("../app/assets/background.jpg")}
         resizeMode="cover"
         style={styles.image}
       >
@@ -12,7 +14,7 @@ export default function WelcomeScreen(props) {
           style={styles.logo}
           resizeMode={"center"}
           resizeMethod={"auto"}
-          source={require("../assets/logo-red.png")}
+          source={require("../app/assets/logo-red.png")}
         />
         <Text style={styles.text}>Sell What You Don't Need</Text>
         <View style={styles.loginInput}></View>
@@ -33,7 +35,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   text: {
-    color: "black",
+    color: colors.black,
     textAlign: "center",
     bottom: 15,
     fontWeight: "300",
@@ -46,13 +48,13 @@ const styles = StyleSheet.create({
   },
   loginInput: {
     width: "100%",
-    backgroundColor: "#fc5c65",
+    backgroundColor: colors.primary,
     height: 60,
     marginTop: "auto",
   },
   registerInput: {
     width: "100%",
-    backgroundColor: "#4ECDC4",
+    backgroundColor: colors.secondary,
     height: 60,
   },
 });

@@ -7,43 +7,45 @@ import {
   StatusBar,
 } from "react-native";
 
+import colors from "../app/config/colors";
+
 export default function ViewImageScreen(props) {
   return (
     <View style={styles.container}>
-      <View style={styles.buttons}>
-        <View style={styles.close}></View>
-        <View style={styles.delete}></View>
-      </View>
+      <View style={styles.closeIcon}></View>
+      <View style={styles.deleteIcon}></View>
       <Image
         style={styles.chair}
         resizeMode={"contain"}
-        source={require("../assets/chair.jpg")}
+        source={require("../app/assets/chair.jpg")}
       />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.black,
+    flex: 1,
+  },
   chair: {
     width: "100%",
     height: "100%",
-    bottom: 50,
   },
-  buttons: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    top: 65,
+  closeIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: colors.primary,
+    position: "absolute",
+    top: 40,
+    left: 30,
   },
-  close: {
-    width: 30,
-    height: 30,
-    backgroundColor: "#fc5c65",
-    marginLeft: 30,
-  },
-  delete: {
-    width: 30,
-    height: 30,
-    backgroundColor: "#4ECDC4",
-    marginRight: 30,
+  deleteIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: colors.secondary,
+    position: "absolute",
+    right: 30,
+    top: 40,
   },
 });
