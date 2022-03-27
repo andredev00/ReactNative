@@ -1,11 +1,4 @@
-import {
-  View,
-  ImageBackground,
-  Text,
-  Image,
-  StyleSheet,
-  StatusBar,
-} from "react-native";
+import { View, Image, StyleSheet } from "react-native";
 
 import colors from "../app/config/colors";
 import dimensions from "../app/config/dimensions";
